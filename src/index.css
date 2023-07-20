@@ -3,7 +3,8 @@ body {
   padding: 0;
   background: #F2F4F5;
   color: #1E1E1F;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  background-color: #B799FF;
 }
 
 #root {
