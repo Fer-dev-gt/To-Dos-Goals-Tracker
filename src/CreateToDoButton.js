@@ -1,6 +1,8 @@
+import './CreateToDoButton.css';
+
 function CreateToDoButton() {
   return(                                               
-    <button>Add new To Do</button>
+    <button className='CreateToDoButton'>+</button>
   );
 }
 
