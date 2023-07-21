@@ -11,7 +11,7 @@ const defaultToDos = [                                                      // V
   { text: 'Take React introduction course', completed: false },
   { text: 'Cry with the "Llorona"', completed: true },
   { text: 'Lalalalala', completed: false },
-  { text: 'Lalalaladla', completed: true },
+  { text: 'canción', completed: true },
 ];
 
 
@@ -22,25 +22,44 @@ function App() {                                                            // E
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;     // Usamos el método filter y lenght (con doble !! para que sean boolenas) para obtener el número de To Do's completadas
   const totalToDos = toDos.length;            
   
-  const filteredToDos = defaultToDos.filter(toDo => 
+  const searchedToDos = toDos.filter(toDo => 
     toDo.text.toLowerCase().includes(searchValue.toLowerCase()));
 
-  console.log(`Los usuarios buscan To Do's de ${searchValue}`);
+
+  const completeToDo = (text) => {                                          // Función que cambia el State de 'toDos' en el apartado de 'completed' de false a true
+    const newToDos = [...toDos];                                            // Creamos una copia del Array 'ToDos' usando destructuración [...]
+    const toDoIndex = newToDos.findIndex( (toDo) =>                         // Encontramos el index del elemento del Array de ToDos que queremos cambiar
+      toDo.text == text );
+    newToDos[toDoIndex].completed = !newToDos[toDoIndex].completed;
+    setToDos(newToDos);
+  };
+
+
+  const deleteToDo = (text) => {                                            // Función que crea un nuevo Array de los toDos sin el ToDos que le dimos X para eliminar
+    const newToDos = [...toDos];                                            
+    const toDoIndex = newToDos.findIndex( (toDo) =>
+      toDo.text == text);
+    newToDos.splice(toDoIndex, 1);                                          // Quitamos el ToDo seleccionado con la X del Array de ToDos que luego va a actualizar el estado
+    setToDos(newToDos);
+  };  
+
 
   return (                                                                  // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
     <>     
-      <ToDoCounter completed={completedToDos} total={totalToDos} />
+      <ToDoCounter completed={completedToDos} total={totalToDos}/>
       <ToDoSearch 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
 
       <ToDoList>
-        { filteredToDos.map(toDo => (
+        { searchedToDos.map(toDo => (
           <ToDoItem 
           key={ toDo.text } 
           text={ toDo.text }
           completed={ toDo.completed }
+          onComplete={ () => completeToDo(toDo.text) }
+          onDelete={ () => deleteToDo(toDo.text) }
           />
         )) }
       </ToDoList>
