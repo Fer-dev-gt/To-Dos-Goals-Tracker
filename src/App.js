@@ -17,33 +17,38 @@ import React from 'react';
 // localStorage.setItem('ToDos_V1', JSON.stringify(defaultToDos));
 // localStorage.removeItem('ToDos_V2');
 
-function App() {                                                            // Esto es un Componente de React, por convención se escriben con mayuscula
-  const localStorageToDos = localStorage.getItem('ToDos_V1');
-  let parsedToDos;
-
-  if (!localStorageToDos) {
-    localStorage.setItem('ToDos_V1', JSON.stringify([]));
-    parsedToDos = [];
+function useLocalStorage(itemName, initialValue){                            // Usando la convención al empezar el nombre con 'use' definimos que esto es un "Custom Hook"
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItem;
+  
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
   } else {
-    parsedToDos = JSON.parse(localStorageToDos);
+    parsedItem = JSON.parse(localStorageItem);
   }
 
+  const [item, setItem] = React.useState(parsedItem);
+  
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem))
+    setItem(newItem)
+  };
 
+  return [item, saveItem];
+}
+
+
+function App() {                                                            // Esto es un Componente de React, por convención se escriben con mayuscula
+  const [toDos, saveToDos] = useLocalStorage('ToDos_V1', []);                    
   const [searchValue, setSearchValue] = React.useState('');                 // Definimos un estado (dentro de un array), el estado no solo se consume tambien se actualiza el estado es inmutable, inicial vació con ''
-  const [toDos, setToDos] = React.useState(parsedToDos);                    // Creamos otro estado con valor inicial de los array con los To Do's hechos y no hechos
   
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;     // Usamos el método filter y lenght (con doble !! para que sean boolenas) para obtener el número de To Do's completadas
   const totalToDos = toDos.length;            
   
   const searchedToDos = toDos.filter(toDo => 
-    toDo.text.toLowerCase().includes(searchValue.toLowerCase()));
-
-
-  const saveToDos = (newToDos) => {
-    localStorage.setItem('ToDos_V1', JSON.stringify(newToDos))
-    setToDos(newToDos)
-  }
-
+    toDo.text.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   const completeToDo = (text) => {                                          // Función que cambia el State de 'toDos' en el apartado de 'completed' de false a true
     const newToDos = [...toDos];                                            // Creamos una copia del Array 'ToDos' usando destructuración [...]
@@ -53,7 +58,6 @@ function App() {                                                            // E
     saveToDos(newToDos);
   };
 
-
   const deleteToDo = (text) => {                                            // Función que crea un nuevo Array de los toDos sin el ToDos que le dimos X para eliminar
     const newToDos = [...toDos];                                            
     const toDoIndex = newToDos.findIndex( (toDo) =>
@@ -61,7 +65,6 @@ function App() {                                                            // E
     newToDos.splice(toDoIndex, 1);                                          // Quitamos el ToDo seleccionado con la X del Array de ToDos que luego va a actualizar el estado
     saveToDos(newToDos);
   };  
-
 
   return (                                                                  // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
     <>     
