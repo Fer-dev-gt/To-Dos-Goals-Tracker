@@ -9,6 +9,22 @@ function App() {                                                            // E
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;     // Usamos el método filter y lenght (con doble !! para que sean boolenas) para obtener el número de To Do's completadas
   const totalToDos = toDos.length;            
   
+  console.log('Log 1');
+
+  // React.useEffect(() => {
+  //   console.log('Looooooooog 2');
+  // });
+
+  // React.useEffect(() => {
+  //   console.log('Looooooooog 2');
+  // }, []);
+
+  React.useEffect(() => {
+    console.log('Looooooooog 2');
+  }, [totalToDos]);
+
+  console.log('Log 3');
+
   const searchedToDos = toDos.filter(toDo => 
     toDo.text.toLowerCase().includes(searchValue.toLowerCase())
   );
