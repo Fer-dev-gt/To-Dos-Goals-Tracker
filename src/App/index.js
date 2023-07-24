@@ -2,29 +2,19 @@ import React from 'react';
 import { AppUI } from './AppUI';
 import { useLocalStorage } from './useLocalStorage';
 
+// localStorage.removeItem('ToDos_V1');
+
 function App() {                                                            // Esto es un Componente de React, por convención se escriben con mayuscula
-  const [toDos, saveToDos] = useLocalStorage('ToDos_V1', []);                    
+  const {item: toDos,
+    saveItem: saveToDos,
+    loading,
+    error} = useLocalStorage('ToDos_V1', []);   
+
   const [searchValue, setSearchValue] = React.useState('');                 // Definimos un estado (dentro de un array), el estado no solo se consume tambien se actualiza el estado es inmutable, inicial vació con ''
   
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;     // Usamos el método filter y lenght (con doble !! para que sean boolenas) para obtener el número de To Do's completadas
   const totalToDos = toDos.length;            
   
-  console.log('Log 1');
-
-  // React.useEffect(() => {
-  //   console.log('Looooooooog 2');
-  // });
-
-  // React.useEffect(() => {
-  //   console.log('Looooooooog 2');
-  // }, []);
-
-  React.useEffect(() => {
-    console.log('Looooooooog 2');
-  }, [totalToDos]);
-
-  console.log('Log 3');
-
   const searchedToDos = toDos.filter(toDo => 
     toDo.text.toLowerCase().includes(searchValue.toLowerCase())
   );
@@ -47,6 +37,8 @@ function App() {                                                            // E
 
   return(
     <AppUI
+    loading = {loading}
+    error = {error}
     completedToDos = {completedToDos}
     totalToDos = {totalToDos} 
     searchValue = {searchValue}
