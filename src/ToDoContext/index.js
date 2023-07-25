@@ -12,6 +12,7 @@ function ToDoProvider({ children }) {
   } = useLocalStorage('ToDos_V1', []);   
 
   const [searchValue, setSearchValue] = React.useState('');                 // Definimos un estado (dentro de un array), el estado no solo se consume tambien se actualiza el estado es inmutable, inicial vació con ''
+  const [openModal, setOpenModal] = React.useState(false);
   
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;     // Usamos el método filter y lenght (con doble !! para que sean boolenas) para obtener el número de To Do's completadas
   const totalToDos = toDos.length;            
@@ -47,7 +48,9 @@ function ToDoProvider({ children }) {
       setSearchValue,
       searchedToDos, 
       completeToDo, 
-      deleteToDo
+      deleteToDo,
+      openModal,
+      setOpenModal
     }}>
       {children}
     </ToDoContext.Provider>

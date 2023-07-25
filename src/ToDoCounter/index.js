@@ -9,7 +9,7 @@ function ToDoCounter() {                                                // Destr
   } = React.useContext(ToDoContext);
 
   return(
-    completedToDos == totalToDos ?
+    completedToDos === totalToDos ?
     <h1 className='ToDoCounter'>You've completed all your ToDo'S 🥳</h1>
     :
     <h1 className='ToDoCounter'>You've completed <span>{completedToDos}

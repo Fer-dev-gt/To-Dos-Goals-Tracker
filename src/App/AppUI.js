@@ -7,6 +7,7 @@ import { ToDosLoading } from '../ToDoLoading';
 import { ToDosError } from '../ToDosError';
 import { EmptyToDos } from '../EmptyToDos';
 import { CreateToDoButton } from '../CreateToDoButton';
+import { Modal } from '../Modal';
 import { ToDoContext } from '../ToDoContext';
 
 function AppUI() {
@@ -15,7 +16,9 @@ function AppUI() {
     error,
     searchedToDos,
     completeToDo, 
-    deleteToDo
+    deleteToDo,
+    openModal,
+    setOpenModal
   } = React.useContext(ToDoContext);
 
   return (                                                                  // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
@@ -33,7 +36,7 @@ function AppUI() {
         )}
         { error && <ToDosError/> }
         { (!loading && searchedToDos.length === 0) && <EmptyToDos/> }
-        
+
         { searchedToDos.map(toDo => (
           <ToDoItem 
             key={ toDo.text } 
@@ -45,7 +48,15 @@ function AppUI() {
         ))}
       </ToDoList>
 
-      <CreateToDoButton/>
+      <CreateToDoButton
+        setOpenModal={setOpenModal}
+      />
+
+      {openModal && (
+      <Modal>
+        La funcionalidad de agregar ToDo
+      </Modal>
+      )}
     </>
   );
 }
