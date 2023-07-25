@@ -8,7 +8,8 @@ function ToDoProvider({ children }) {
     item: toDos,
     saveItem: saveToDos,
     loading,
-    error} = useLocalStorage('ToDos_V1', []);   
+    error
+  } = useLocalStorage('ToDos_V1', []);   
 
   const [searchValue, setSearchValue] = React.useState('');                 // Definimos un estado (dentro de un array), el estado no solo se consume tambien se actualiza el estado es inmutable, inicial vació con ''
   
@@ -47,8 +48,7 @@ function ToDoProvider({ children }) {
       searchedToDos, 
       completeToDo, 
       deleteToDo
-    }}
-    >
+    }}>
       {children}
     </ToDoContext.Provider>
   );
