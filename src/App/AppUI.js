@@ -8,6 +8,7 @@ import { ToDosError } from '../ToDosError';
 import { EmptyToDos } from '../EmptyToDos';
 import { CreateToDoButton } from '../CreateToDoButton';
 import { Modal } from '../Modal';
+import { ToDoForm } from '../ToDoForm';
 import { ToDoContext } from '../ToDoContext';
 
 function AppUI() {
@@ -54,7 +55,7 @@ function AppUI() {
 
       {openModal && (
       <Modal>
-        La funcionalidad de agregar ToDo
+        <ToDoForm />
       </Modal>
       )}
     </>
