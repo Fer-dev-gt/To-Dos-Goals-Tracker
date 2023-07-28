@@ -6,7 +6,7 @@ function ToDoForm() {
   const {
     addToDo,
     setOpenModal,
-    validationToDo,
+    validatingToDo,
     newToDoValue,
     setNewToDoValue,
   } = React.useContext(ToDoContext);
@@ -22,8 +22,8 @@ function ToDoForm() {
   };
 
   const onChange = (event) => {
-    validationToDo(newToDoValue)
     setNewToDoValue(event.target.value);
+    validatingToDo(event.target.value)
   };
 
   return(
@@ -32,7 +32,6 @@ function ToDoForm() {
       <textarea
         placeholder='Cut onions for lunch'
         value={newToDoValue}
-        onFocus={validationToDo(newToDoValue)}
         onChange={onChange}
         required
       />

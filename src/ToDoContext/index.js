@@ -33,15 +33,16 @@ function ToDoProvider({ children }) {
     setNewToDoValue('');
   };
 
-  const validationToDo = (text) => {
+  const validatingToDo = (text) => {
     const newToDos = [...toDos];
     const toDoIndex = newToDos.findIndex( (toDo) => 
       toDo.text === text
     );
       if (toDoIndex !== -1) {
         setValidStatus(!validStatus);
-        alert('This To Do already exists');
+        alert(`This To Do "${text}" already exists`);
         setNewToDoValue('');
+        // setNewToDoValue(text);
       }
   }
 
@@ -78,7 +79,7 @@ function ToDoProvider({ children }) {
       deleteToDo,
       openModal,
       setOpenModal,
-      validationToDo,
+      validatingToDo,
       validStatus,
       setValidStatus,
       newToDoValue,
