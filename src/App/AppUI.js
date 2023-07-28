@@ -19,7 +19,8 @@ function AppUI() {
     completeToDo, 
     deleteToDo,
     openModal,
-    setOpenModal
+    setOpenModal,
+    validationToDo
   } = React.useContext(ToDoContext);
 
   return (                                                                  // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
@@ -55,7 +56,9 @@ function AppUI() {
 
       {openModal && (
       <Modal>
-        <ToDoForm />
+        <ToDoForm 
+          validationToDo={validationToDo}
+        />
       </Modal>
       )}
     </>

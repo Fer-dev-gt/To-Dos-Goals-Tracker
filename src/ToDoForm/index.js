@@ -6,22 +6,24 @@ function ToDoForm() {
   const {
     addToDo,
     setOpenModal,
+    validationToDo,
+    newToDoValue,
+    setNewToDoValue,
   } = React.useContext(ToDoContext);
   
-  const[newToDoValue, setNewToDoValue] = React.useState('');                                // State local para que solo se use el valor final a enviar y no letra por letra
-
   const onSubmit = (event) => {
-      event.preventDefault();
-      addToDo(newToDoValue);
-      setOpenModal(false);
+    event.preventDefault();
+    addToDo(newToDoValue);
+    setOpenModal(false);
   };
 
   const onCancel = () => {
-      setOpenModal(false);
+    setOpenModal(false);
   };
 
   const onChange = (event) => {
-      setNewToDoValue(event.target.value);
+    validationToDo(newToDoValue)
+    setNewToDoValue(event.target.value);
   };
 
   return(
@@ -30,6 +32,7 @@ function ToDoForm() {
       <textarea
         placeholder='Cut onions for lunch'
         value={newToDoValue}
+        onFocus={validationToDo(newToDoValue)}
         onChange={onChange}
         required
       />
