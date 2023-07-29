@@ -12,7 +12,7 @@ function ToDoSearch() {
   return(
     <div className='search-container'>
       <input 
-      placeholder='Cut onions'
+      placeholder='Search your To Do'
       className='ToDoSearch'
       value={searchValue}
       onChange={(event) => {

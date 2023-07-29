@@ -1,5 +1,4 @@
 .ModalBackground {
-  background-color: rgba(32, 35, 41, .8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +8,11 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background: radial-gradient(circle at 50% 125%,
+    #005399 12%,
+    #9b36b7 27%,
+    #d92e7f 40%,
+    #fffb00 70%,
+    #6fc104 85%
+  );
 }

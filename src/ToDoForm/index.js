@@ -28,7 +28,7 @@ function ToDoForm() {
 
   return(
     <form onSubmit={onSubmit}>
-      <label>Write your new To Do Here</label>
+      <label>Write a new To Do here</label>
       <textarea
         placeholder='Cut onions for lunch'
         value={newToDoValue}

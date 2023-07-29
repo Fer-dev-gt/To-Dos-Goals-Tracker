@@ -2,12 +2,14 @@ form {
   width: 90%;
   max-width: 300px;
   background-color: #fff;
-  padding: 33px 40px;
+  padding: 36px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 20px 24px 0px #000000;
+  border: 2px solid #000000;
 }
 
 label {
@@ -21,7 +23,7 @@ label {
 textarea {
   background-color: #F9FBFC;
   border: 2px solid #202329;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
   color: #1E1E1F;
   font-size: 20px;
@@ -30,25 +32,22 @@ textarea {
   height: 96px;
   width: calc(100% - 25px);
 }
-
 textarea::placeholder {
   color: #A5A5A5;
   font-family: 'Montserrat';
   font-weight: 400;
 }
-
 textarea:focus {
-  outline-color: #61DAFA;
+  outline-color: #9b36b7;
 }
 
 .ToDoForm-buttonContainer {
-  margin-top: 14px;
+  margin-top: 32px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
-
 .ToDoForm-button {
   cursor: pointer;
   display: inline-block;
@@ -57,15 +56,19 @@ textarea:focus {
   font-weight: 400;
   width: 120px;
   height: 48px;
+  border: 2px solid #000000;
   border-radius: 4px;
-  border: none;
+  transition: 0.4s;
 }
-
 .ToDoForm-button--add {
-  background: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.7);
+  background: #8ee4fb;
 }
-
+.ToDoForm-button--add:hover {
+  background: #25d0ff;
+}
 .ToDoForm-button--cancel {
-  background: transparent;
+  background: #ff8684;
+}
+.ToDoForm-button--cancel:hover {
+  background:  #ef3835;
 }

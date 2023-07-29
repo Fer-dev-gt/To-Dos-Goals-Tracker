@@ -6,13 +6,19 @@
   align-items: center;
   margin-top: 24px;
   box-shadow: 4px 16px 8px rgba(32, 35, 41, 0.15);
-  border-radius: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid ; /* Add a transparent border */
+  transition: 0.5s;
 }
-
+.ToDoItem:hover {
+  transform: translateY(-6px);
+  border-radius: 1.2rem 1.2rem 0 0; 
+  box-shadow: 6px 12px 0px #000000; 
+}
 .ToDoItem-p {
   margin: 24px 0 24px 24px;
   width: calc(100% - 120px);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 400;
 }
@@ -29,9 +35,7 @@
   width: 48px;
   font-size: 28px;
   font-weight: bold;
-  /* background-color: #CCC; */
 }
-
 .Icon-check {
   position: absolute;
   left: 12px;
@@ -39,11 +43,10 @@
 .Icon-check--active {
   color: #4caf50;
 }
-
 .Icon-delete {
   position: absolute;
-  right: 0;
-  
+  right: 12px;
+  font-size: 32px;
 }
 .Icon-delete:hover {
   color: red;

@@ -2,10 +2,9 @@
   font-size: 36px;
   text-align: center;
   margin: 0;
-  padding: 48px;
+  padding: 48px 48px 28px;
   font-weight: normal;
 }
-
 .ToDoCounter span {
   font-weight: bold;
 }
