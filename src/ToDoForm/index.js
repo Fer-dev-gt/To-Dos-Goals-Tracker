@@ -1,6 +1,8 @@
 import React from 'react';
 import { ToDoContext } from '../ToDoContext';
 import './ToDoForm.css';
+import man from './man.png';
+import star from './star.png';
 
 function ToDoForm() {
   const {
@@ -27,26 +29,30 @@ function ToDoForm() {
   };
 
   return(
-    <form onSubmit={onSubmit}>
-      <label>Write a new To Do here</label>
-      <textarea
-        placeholder='Cut onions for lunch'
-        value={newToDoValue}
-        onChange={onChange}
-        required
-      />
-      <div className='ToDoForm-buttonContainer'>
-        <button 
-          type=''
-          className='ToDoForm-button ToDoForm-button--cancel'
-          onClick={onCancel}
-        >Cancel</button>
-        <button 
-          type='submit'
-          className='ToDoForm-button ToDoForm-button--add'
-        >Add</button>
-      </div>
-    </form>
+    <>
+      <form onSubmit={onSubmit}>
+        <label>Write a new To Do here</label>
+        <textarea
+          placeholder='Cut onions for lunch'
+          value={newToDoValue}
+          onChange={onChange}
+          required
+        />
+        <div className='ToDoForm-buttonContainer'>
+          <button 
+            type=''
+            className='ToDoForm-button ToDoForm-button--cancel'
+            onClick={onCancel}
+          >Cancel</button>
+          <button 
+            type='submit'
+            className='ToDoForm-button ToDoForm-button--add'
+          >Add</button>
+        </div>
+      </form>
+      <img className="star" src={star} alt="TaskBudy"/>
+      <span className='emoji'>📝</span>
+     </>
   )
 }
 

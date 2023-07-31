@@ -72,3 +72,16 @@ textarea:focus {
 .ToDoForm-button--cancel:hover {
   background:  #ef3835;
 }
+
+.star{
+  height: 300px;
+  width: 320px;
+  top: 60px;
+  position: absolute;
+}
+.emoji{
+  right: 828px;
+  top: 168px;
+  position: absolute;
+  font-size: 50px;
+}

@@ -5,16 +5,27 @@ import './ToDoCounter.css';                                             // Impor
 function ToDoCounter() {                                                // Destructuramos la importacion de los 'props', 'props' es un Objeto que tiene distintas propiedades
   const {
     completedToDos,
-    totalToDos
+    totalToDos,
+    loading
   } = React.useContext(ToDoContext);
+
+  const progressPercent = totalToDos > 0 ? Math.round(completedToDos / totalToDos * 100) : 0;
 
   return(
     completedToDos === totalToDos ?
-    <h1 className='ToDoCounter'>You've completed all your ToDo'S 🥳</h1>
+    <div className='ToDoCounter'>You've completed all <br></br>your ToDo'S 🥳
+      <div className="bar">
+        <div className="progress" style={{width: `${progressPercent}%`}}></div>
+      </div>
+    </div>
     :
-    <h1 className='ToDoCounter'>You've completed <span>{completedToDos}
-    </span> of <span>{ totalToDos }</span> To Do's             
-    </h1>
+    <div className="ToDoCounter">
+      <span>You have completed </span>
+      <span>{completedToDos} / {totalToDos} To Do's</span>
+      <div className="bar">
+        <div className="progress" style={{width: `${progressPercent}%`}}></div>
+      </div>
+    </div>
   );
 }
 

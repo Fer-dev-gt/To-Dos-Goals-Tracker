@@ -7,7 +7,7 @@
   margin-top: 24px;
   box-shadow: 4px 16px 8px rgba(32, 35, 41, 0.15);
   border-radius: 8px;
-  border: 2px solid ; /* Add a transparent border */
+  border: 2px solid ; 
   transition: 0.5s;
 }
 .ToDoItem:hover {

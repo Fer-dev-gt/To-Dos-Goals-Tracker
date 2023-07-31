@@ -1,11 +1,13 @@
 import './CreateToDoButton.css';
 import { useContext } from 'react';
 import { ToDoContext } from '../ToDoContext';
-import { Modal } from '../Modal';
+import worm from './worm.png';
+import cube from './cube.png';
 
 function CreateToDoButton({ setOpenModal }) {
   // const {setOpenModal, openModal} = useContext(ToDoContext);
-  return(                                               
+  return(    
+    <>                                           
     <button className='CreateToDoButton'
       onClick={
         (event) => {
@@ -16,6 +18,11 @@ function CreateToDoButton({ setOpenModal }) {
         }
       }
     >+</button>
+     <img className="worm1" src={worm} alt="TaskBudy"/>
+     <img className="cube1" src={cube} alt="TaskBudy"/>
+     <img className="worm2" src={worm} alt="TaskBudy"/>
+     <img className="cube2" src={cube} alt="TaskBudy"/>
+    </>
   );
 }
 

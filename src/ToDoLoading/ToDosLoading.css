@@ -33,9 +33,9 @@
   right: 0;
 }
 .LoadingTodo-container, .LoadingTodo-completeIcon, .LoadingTodo-deleteIcon {
-  background: linear-gradient(90deg, rgb(250, 250, 250), rgb(200, 199, 199));
+  background: linear-gradient(90deg, rgb(225, 225, 225), rgb(177, 177, 177));
   background-size: 400% 400%;
-  animation: loadingAnimation 3s ease-in-out infinite;
+  animation: loadingAnimation 1.5s ease-in-out infinite;
 }
   
 @keyframes loadingAnimation {
