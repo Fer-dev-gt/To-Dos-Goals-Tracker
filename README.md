@@ -8,7 +8,7 @@ La rama principal contiene el código con el que eempezamos el curso. En las dem
 
 ¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
 
-<img width="2240" alt="Screenshot 2023-07-31 at 23 47 20" src="https://github.com/Fer-dev-gt/react-project/assets/119085740/75ad6a52-8dfe-48ae-ab1f-4161f97ff77c">
+<img width="2240" alt="Screenshot 2023-08-01 at 00 05 57" src="https://github.com/Fer-dev-gt/react-project/assets/119085740/3b02e55d-341f-4bef-a45a-f21f30b33dfc">
 
 
 ## Getting Started with Create React App
