@@ -13,7 +13,8 @@ function ToDoCounter() {                                                // Destr
 
   return(
     completedToDos === totalToDos ?
-    <div className='ToDoCounter'>You've completed all <br></br>your ToDo'S 🥳
+    <div className='ToDoCounter'>
+      <span className='bold'>You've completed all <br></br>🥳 your ToDo'S 🥳</span>
       <div className="bar">
         <div className="progress" style={{width: `${progressPercent}%`}}></div>
       </div>
@@ -21,7 +22,8 @@ function ToDoCounter() {                                                // Destr
     :
     <div className="ToDoCounter">
       <span>You have completed </span>
-      <span>{completedToDos} / {totalToDos} To Do's</span>
+      <span className='bold'>{completedToDos} / {totalToDos}</span> 
+      <span> To Do's</span>
       <div className="bar">
         <div className="progress" style={{width: `${progressPercent}%`}}></div>
       </div>

@@ -25,7 +25,7 @@ function AppUI() {
 
   return (                                                                  // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
     <>     
-    <h1>To Do's Goals</h1>
+    <h1>To-Do's Goals</h1>
       <ToDoCounter />
       <ToDoSearch />
         

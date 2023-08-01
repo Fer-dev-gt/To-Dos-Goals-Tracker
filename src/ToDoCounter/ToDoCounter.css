@@ -2,14 +2,14 @@
   font-size: 36px;
   text-align: center;
   margin: 0;
-  padding: 0px 48px 16px;
+  padding: 0px 40px 16px;
   font-weight: normal;
   width: calc(100% - 62px);
   max-width: 650px;
 }
-/* .ToDoCounter span {
+.bold {
   font-weight: bold;
-} */
+}
 
 .bar {
   width: calc(100% - 40px);

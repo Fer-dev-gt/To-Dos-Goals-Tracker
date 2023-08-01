@@ -79,9 +79,10 @@ textarea:focus {
   top: 60px;
   position: absolute;
 }
-.emoji{
-  right: 828px;
-  top: 168px;
+.emoji {
+  right: 49%; 
+  transform: translateX(50%); 
+  top: 172px;
   position: absolute;
   font-size: 50px;
 }

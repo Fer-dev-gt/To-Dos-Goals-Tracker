@@ -20,7 +20,7 @@ function ToDoItem(props) {                                        // Vamos a apl
   }
   
   return(                                                         // Creamos nuestra estructura JSX
-    <li className='ToDoItem'>
+    <li className={`ToDoItem ${props.completed && "ToDoItem--completed"}`} >
       <span 
         className={`Icon Icon-check ${props.
         completed && "Icon-check--active"}`}

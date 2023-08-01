@@ -3,6 +3,7 @@ import { ToDoContext } from '../ToDoContext';
 import './ToDoForm.css';
 import man from './man.png';
 import star from './star.png';
+import soundFileAdded from './added.mp3'
 
 function ToDoForm() {
   const {
@@ -12,11 +13,13 @@ function ToDoForm() {
     newToDoValue,
     setNewToDoValue,
   } = React.useContext(ToDoContext);
+  const audioAdded = new Audio(soundFileAdded);
   
   const onSubmit = (event) => {
     event.preventDefault();
     addToDo(newToDoValue);
     setOpenModal(false);
+    audioAdded.play();
   };
 
   const onCancel = () => {
@@ -51,7 +54,7 @@ function ToDoForm() {
         </div>
       </form>
       <img className="star" src={star} alt="TaskBudy"/>
-      <span className='emoji'>📝</span>
+      <span className='emoji'>🤓</span>
      </>
   )
 }

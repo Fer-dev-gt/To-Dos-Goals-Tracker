@@ -51,7 +51,12 @@ function ToDoProvider({ children }) {
     const toDoIndex = newToDos.findIndex( (toDo) =>                         // Encontramos el index del elemento del Array de ToDos que queremos cambiar
       toDo.text === text 
     );
+
+    const toDo = newToDos[toDoIndex]
     newToDos[toDoIndex].completed = !newToDos[toDoIndex].completed;
+    newToDos.splice(toDoIndex, 1)
+
+    toDo.completed ? newToDos.push(toDo) : newToDos.unshift(toDo);
     saveToDos(newToDos);
   };
 
@@ -63,7 +68,6 @@ function ToDoProvider({ children }) {
     newToDos.splice(toDoIndex, 1);                                          // Quitamos el ToDo seleccionado con la X del Array de ToDos que luego va a actualizar el estado
     saveToDos(newToDos);
   };  
-
 
   return (
     <ToDoContext.Provider value={{
