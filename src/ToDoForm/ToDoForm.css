@@ -86,3 +86,33 @@ textarea:focus {
   position: absolute;
   font-size: 50px;
 }
+
+
+@media (max-width: 930px) {
+  form {
+    width: 64%;
+    padding: 32px 36px;
+    border-radius: 8px;
+    box-shadow: 20px 24px 0px #000000;
+    border: 2px solid #000000;
+  }
+  label {
+    font-size: 23px;
+  }
+
+  .ToDoForm-buttonContainer {
+    justify-content: space-between;
+  }  
+
+  .star{
+    height: 200px;
+    width: 220px;
+    bottom: calc(100% - 60px);
+    position: absolute;
+  }
+  .emoji {
+    right: 47%;
+    top: 130px;
+    font-size: 40px;
+  }
+}

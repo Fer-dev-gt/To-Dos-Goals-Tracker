@@ -1,11 +1,8 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  place-items: center;
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
   color: #1E1E1F;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
   background: radial-gradient(ellipse at 0% 125%,
@@ -25,6 +22,26 @@ body {
   min-height: 100vh;
   align-items: center;
 }
-h1{
-  font-size: 50px;
+
+h1 {
+  font-size: 57px;
+  margin: 24px 0px 16px;
+}
+
+
+@media (max-width: 930px) {
+  body {
+    background: radial-gradient(circle at 50% 120%, 
+      #005399 12%, 
+      #9b36b7 27%, 
+      #d92e7f 45%, 
+      #fffb00 70%, 
+      #6fc104 89% 
+    );
+  }
+  h1 {
+    font-size: 57px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
 }

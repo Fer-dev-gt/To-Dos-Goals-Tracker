@@ -1,0 +1,24 @@
+.footer {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 12px;
+  font-weight: bold;
+}
+.footer a {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: #2600ff;
+}
+
+
+@media (max-width: 930px) {
+  .footer {
+    color: orange;
+  }
+  .footer a {
+    color: rgb(141, 218, 25);
+  }
+}

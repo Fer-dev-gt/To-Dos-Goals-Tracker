@@ -8,6 +8,7 @@ import { ToDosError } from '../ToDosError';
 import { EmptyToDos } from '../EmptyToDos';
 import { CreateToDoButton } from '../CreateToDoButton';
 import { Modal } from '../Modal';
+import { Footer } from '../Footer';
 import { ToDoForm } from '../ToDoForm';
 import { ToDoContext } from '../ToDoContext';
 
@@ -62,6 +63,7 @@ function AppUI() {
         />
       </Modal>
       )}
+      <Footer />
     </>
   );
 }

@@ -15,7 +15,7 @@
   align-items:center;
   height:80px;
   width:80px;
-  z-index: 1;
+  z-index: 4;
   transform:rotate(0);
   transition:.4s ease-in-out
 }
@@ -25,18 +25,17 @@
 }
 img {
   z-index: -1;
+  position: absolute;
 }
 .cube1 {
   width: 400px;
   height: 400px;
-  position: absolute;
   top: 670px;
   right: 752px;
 }
 .worm1 {
   width: 400px;
   height: 400px;
-  position: absolute;
   top: 100px;
   right: 750px;
   rotate: 318deg;
@@ -44,7 +43,6 @@ img {
 .cube2 {
   width: 400px;
   height: 400px;
-  position: absolute;
   top: 70px;
   left: 780px;
   transform: scaleX(-1);
@@ -52,9 +50,47 @@ img {
 .worm2 {
   width: 400px;
   height: 400px;
-  position: absolute;
   top: 643px;
   left: 750px;
   rotate: 38deg;
   transform: scaleX(-1);
+}
+
+
+@media (max-width: 930px) {
+  .CreateToDoButton {
+    height: 60px;
+    width: 60px;
+    top: 20px;
+    right: 20px;
+    font-size: 59px;
+  }
+  img {
+    z-index: -1;
+    position: fixed;
+  }
+  .worm1 {
+    width: 200px;
+    height: 200px;
+    top: calc(100% - 855px);
+    right: calc(100% - 132px);
+  }
+  .cube1 {
+    width: 200px;
+    height: 200px;
+    top: calc(100% - 336px);
+    right: calc(100% - 132px);
+  }
+  .worm2 {
+    width: 200px;
+    height: 200px;
+    top: calc(100% - 269px);
+    left: calc(100% - 132px);
+  }
+  .cube2 {
+    width: 200px;
+    height: 200px;
+    top: calc(100% - 692px);
+    left: calc(100% - 132px);
+  }
 }
