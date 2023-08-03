@@ -19,23 +19,23 @@ Don't be shy and try it yourself, there are many surprises waiting for you! http
 
 ## Demo and Feautures
 <img width="2240" alt="Screenshot 2023-08-02 at 19 09 21" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/c9c3abda-3afc-4446-8a76-7dda136ebe0a">
-\
+<br>
 You can create and save any task you want!
 
 <img width="696" alt="Screenshot 2023-08-01 at 23 30 14" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/2e9218cc-de3a-41c6-9eb6-987c0ef5923c">
-\
+<br>
 Keep track of your complete and pending task with a simple and good looking list 😎
 
 <img width="412" alt="Screenshot 2023-08-01 at 23 29 34" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/51a9a881-faa2-4d87-b668-0a65483bd106">
-\
+<br>
 You can use it from your phone thanks to our adaptive device design.
 
 <img width="655" alt="Screenshot 2023-08-02 at 19 13 30" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/8cc2a8f6-ec02-4896-b00e-8b57cf3c515f">
-\
+<br>
 You can quickly check how many To Do's you have completed and see how many are left.
 
 <img width="693" alt="Screenshot 2023-08-02 at 19 15 08" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/1daaa245-ae07-4c19-82c9-97e205e52a0b">
-\
+<br>
 Got too many task? Don't worry you can easily use our serch bar to write and get the To Do you were looking for.
 
 ## Installation Steps:
