@@ -1,16 +1,14 @@
+<h1 align="center" id="title">To-Do's Goals</h1>
 # Repositorio base del Curso de Introducción a React.js en Platzi
 
-¡Hola, Platzinauta! Checkout the results https://fer-dev-gt.github.io/To-Dos-Goals-Tracker/
+Checkout the results https://fer-dev-gt.github.io/To-Dos-Goals-Tracker/
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
-
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
 
 <img width="2240" alt="Screenshot 2023-08-01 at 00 05 57" src="https://github.com/Fer-dev-gt/react-project/assets/119085740/3b02e55d-341f-4bef-a45a-f21f30b33dfc">
 
-
+# React Documentation ⬇️
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
