@@ -1,12 +1,66 @@
 <h1 align="center" id="title">To-Do's Goals</h1>
-# Repositorio base del Curso de Introducción a React.js en Platzi
+To-Do's Goals Tracker is a website designed to help you managing your pending tasks and goals you want to achieve by simply creating a list of items of the To Do's you want to complete on the near future. There's no limit to the amount of To Do's you can create (but is better to not have so many pending tasks 😉). Once you've finished an existing task you can mark it as completed and the selected To Do will go to the bottom of your list, you can also delete it from your list by simply pressing the trashcan button.
 
-Checkout the results https://fer-dev-gt.github.io/To-Dos-Goals-Tracker/
-
-Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
-
+Don't be shy and try it yourself, there are many surprises waiting for you! https://fer-dev-gt.github.io/To-Dos-Goals-Tracker/
 
 <img width="2240" alt="Screenshot 2023-08-01 at 00 05 57" src="https://github.com/Fer-dev-gt/react-project/assets/119085740/3b02e55d-341f-4bef-a45a-f21f30b33dfc">
+
+## Table of Contents
+
+- [Demo and Feautures](#demo-and-features)
+- [Installation Steps](#installation-steps)
+- [The process](#the-process)
+  - [Built with](#built-with)
+  - [Structure](#quiz-structure)
+- [Useful resources](#useful-resources)
+- [License](#license)
+- [Author](#author)
+- [React Documentation](#react-documentation)
+
+## Demo and Feautures
+<img width="2240" alt="Screenshot 2023-08-02 at 19 09 21" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/c9c3abda-3afc-4446-8a76-7dda136ebe0a">
+You can create and save any task you want!
+
+<img width="696" alt="Screenshot 2023-08-01 at 23 30 14" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/2e9218cc-de3a-41c6-9eb6-987c0ef5923c">
+Keep track of your complete and pending task with a simple and good looking list 😎
+
+<img width="412" alt="Screenshot 2023-08-01 at 23 29 34" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/51a9a881-faa2-4d87-b668-0a65483bd106">
+You can use it from your phone thanks to our adaptive device design.
+
+<img width="655" alt="Screenshot 2023-08-02 at 19 13 30" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/8cc2a8f6-ec02-4896-b00e-8b57cf3c515f">
+You can quickly check how many To Do's you have completed and see how many are left.
+
+<img width="693" alt="Screenshot 2023-08-02 at 19 15 08" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/1daaa245-ae07-4c19-82c9-97e205e52a0b">
+Got too many task? Don't worry you can easily use our serch bar to write and get the To Do you were looking for.
+
+## Installation Steps:
+If you want to make changes to the source code you just need to:
+
+1. Do a (`git clone`).
+2. Install all the dependencies (`npm i`).
+3. Execute and enjoy the app (`npm start`).
+
+## The process 
+### Built with
+
+Technologies used in the project:
+
+*   React 18.2.0
+*   web-vitals 3.4.0
+*   iOS 13.4.1
+
+## Useful resources
+
+* [Figma](https://www.figma.com/proto/3aZkIjXMEzBDACmWxqUVes/TODO-Machine-Mockup?type=design&amp%3Bnode-id=1-3&amp%3Bt=NH0HT6nS2TxaLKp4-1&amp%3Bscaling=min-zoom&amp%3Bpage-id=0%3A1&amp%3Bstarting-point-node-id=1%3A3&amp%3Bmode=design&node-id=1-265&starting-point-node-id=1%3A3) - Used to create graphics.
+* [React and Components](https://create-react-app.dev/docs/deployment/) - A guide to React and Components.
+
+## License:
+
+> This project is licensed under the MIT License
+
+## Author
+
+Made with 💜 by [Fernando Orozco](https://www.linkedin.com/in/fernando-orozco-velasquez/)
 
 # React Documentation ⬇️
 ## Getting Started with Create React App
