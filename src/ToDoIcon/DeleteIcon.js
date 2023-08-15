@@ -6,7 +6,7 @@ function DeleteIcon({ onDelete }) {
     <ToDoIcon
       type="delete"
       color="gray"
-      onClick={onDelete}
+      onClick={onDelete}                    // Cada vez que se le haga click se va a borrar el ToDoItem
     />
   );
 }

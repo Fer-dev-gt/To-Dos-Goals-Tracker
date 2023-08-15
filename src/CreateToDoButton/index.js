@@ -1,18 +1,14 @@
 import './CreateToDoButton.css';
-import { useContext } from 'react';
-import { ToDoContext } from '../ToDoContext';
 import worm from './worm.png';
 import cube from './cube.png';
 
 function CreateToDoButton({ setOpenModal }) {
-  // const {setOpenModal, openModal} = useContext(ToDoContext);
   return(    
     <>                                           
     <button className='CreateToDoButton'
       onClick={
         (event) => {
-          setOpenModal(state => !state)
-          console.log('le diste click')
+          setOpenModal(state => !state)                       // Cambia el valor del openModal, le hace toggle al valor booleano
           console.log(event)
           console.log(event.target)
         }
@@ -25,6 +21,5 @@ function CreateToDoButton({ setOpenModal }) {
     </>
   );
 }
-
 
 export { CreateToDoButton };
