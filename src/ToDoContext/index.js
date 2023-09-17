@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const ToDoContext = React.createContext();                                                // Dentro de este React Context ira buena parte de la lógica del programa como funciones para manejar los ToDos

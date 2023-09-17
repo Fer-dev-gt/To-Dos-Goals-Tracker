@@ -21,12 +21,13 @@ function AppUI() {
     deleteToDo,
     openModal,
     setOpenModal,
-    validatingToDo
+    validatingToDo,
+    totalToDos
   } = React.useContext(ToDoContext);                                            // Importamos los States y props que vamos a usar en la lógica de la UI
 
   return (                                                                      // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
     <>                                                                        { /* Forma mas corta de envolver varios componentes y reederizarlos juntos */ }
-    <h1>To-Do's Goals</h1>
+      <h1>To-Do's Goals</h1>
       <ToDoCounter />
       <ToDoSearch />
         
@@ -40,7 +41,7 @@ function AppUI() {
         )}
 
         { error && <ToDosError/> }
-        { (!loading && searchedToDos.length === 0) && <EmptyToDos/> }       { /* Mostramos un mensaje donde decimos que no hay ningun ToDo creado, se muestra si no estamos en estado de 'loading' y 'searchedToDos es igual a 0' */ }
+        { (!loading && !totalToDos ) && <EmptyToDos/> }                       { /* Mostramos un mensaje donde decimos que no hay ningun ToDo creado, se muestra si no estamos en estado de 'loading' y 'searchedToDos es igual a 0' */ }
 
         { searchedToDos.map(toDo => (                                         // Retorna y muestra los ToDos que fueron buscados en el buscador, si el buscador esta vacío muestra todo los ToDos guardados
           <ToDoItem 

@@ -17,6 +17,10 @@
 @media (max-width: 930px) {
   .footer {
     color: orange;
+    margin-top: 100px;
+    bottom: 10px;
+    position: relative;
+    font-size: 17px;
   }
   .footer a {
     color: rgb(141, 218, 25);

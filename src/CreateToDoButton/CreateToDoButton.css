@@ -31,27 +31,29 @@ img {
   width: 400px;
   height: 400px;
   top: 670px;
-  right: 752px;
+  right: 120%;
 }
 .worm1 {
   width: 400px;
   height: 400px;
   top: 100px;
-  right: 750px;
+  right: 120%;
   rotate: 318deg;
 }
 .cube2 {
+  position: fixed;
   width: 400px;
   height: 400px;
   top: 70px;
-  left: 780px;
+  right: 12%;
   transform: scaleX(-1);
 }
 .worm2 {
+  position: fixed;
   width: 400px;
   height: 400px;
   top: 643px;
-  left: 750px;
+  right: 15%;
   rotate: 38deg;
   transform: scaleX(-1);
 }
