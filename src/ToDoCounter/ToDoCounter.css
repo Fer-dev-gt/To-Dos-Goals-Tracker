@@ -35,6 +35,9 @@
     margin-bottom: 20px;
     width: calc(100% - 12px);
   }
+  .ToDoCounter--completed {
+    min-width: 315px;
+  }
   .bar {
     margin: 12px 18px 20px;
   }

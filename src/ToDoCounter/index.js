@@ -12,7 +12,7 @@ function ToDoCounter() {                                                        
 
   return(
     completedToDos === totalToDos ?                                                               // Si completamos todos los ToDos renderizamos un mensaje de felicitacion
-    <div className='ToDoCounter'>
+    <div className={`ToDoCounter ${(completedToDos === totalToDos) && "ToDoCounter--completed"}`}>
       <span className='bold'>You've completed all <br></br>🥳 your ToDo'S 🥳</span>
       <div className="bar">
         <div className="progress" style={{width: `${progressPercent}%`}}></div>

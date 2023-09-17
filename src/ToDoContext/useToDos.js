@@ -1,15 +1,14 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const ToDoContext = React.createContext();                                                // Dentro de este React Context ira buena parte de la lógica del programa como funciones para manejar los ToDos
 
-function ToDoProvider({ children }) {                                                     // Importamos los props, en esta caso es el Componente 'AppUI'
+function useToDos() {                                                                     // Convertiremos este Provider en un Custom Hook, ya que no envolvera al Componente App ya no es necesario aplicar la lóciga de desctructuración de 'children'. Este Custom Hook puede consumir otros Custom Hooks como 'useLocalStorage'
   const {
     item: toDos,                                                                          // Array de items guardados en LocalStorage le cambiamos el nombre a 'toDos'
     saveItem: saveToDos,                                                                  // Le cambiamos el nombre al método 'saveItem' a 'saveToDos'
+    sincronizeItem: sincronizedToDos,
     loading,                                                                            
-    error,
-    sincronizeItem: sincronizedToDos
+    error
   } = useLocalStorage('ToDos_V1', []);                                                    // Usamos este Hook para obtener los Items de ToDos guardados en LocalStorage, le mandamos el nombre del Object que buscamos y un Array vacio como valor inicial si no existen datos registrados
 
   const [searchValue, setSearchValue] = React.useState('');                               // Definimos un estado (dentro de un array), el estado no solo se consume tambien se actualiza el estado es inmutable, le damos valor inicial de ''
@@ -65,32 +64,26 @@ function ToDoProvider({ children }) {                                           
     saveToDos(newToDos);                                                                  // Ejecutamos la función para guardar el nuevo Array de ToDos sin el ToDo eliminado y actualizamos el State
   };  
 
-  return (
-    <ToDoContext.Provider value = {                                                       // Retornamos todos los States y props que se usaran en el proyecto
-      {                                                      
-        loading, 
-        error,
-        completedToDos, 
-        totalToDos, 
-        searchValue,
-        setSearchValue,
-        searchedToDos, 
-        addToDo,
-        completeToDo, 
-        deleteToDo,
-        openModal,
-        setOpenModal,
-        validatingToDo,
-        validStatus,
-        setValidStatus,
-        newToDoValue,
-        setNewToDoValue,
-        sincronizedToDos
-      }
-    }>
-      {children}
-    </ToDoContext.Provider>
-  );
+  return {                                                                                // En vez de retornar los valores, States, y funciones como un 'value' del Provider de un Context, ahora simplemente los devolvemos como un Objeto normal para que el Componente App lo consuma haciendo Composición de Componentes
+    loading, 
+    error,
+    completedToDos, 
+    totalToDos, 
+    searchValue,
+    setSearchValue,
+    searchedToDos, 
+    addToDo,
+    completeToDo, 
+    deleteToDo,
+    openModal,
+    setOpenModal,
+    validatingToDo,
+    validStatus,
+    setValidStatus,
+    newToDoValue,
+    setNewToDoValue,
+    sincronizedToDos
+  };
 }
 
-export { ToDoContext, ToDoProvider };                                                     // Forma de retornar varios 'Componentes' como el Context y el componente 'ToDoProvider'
+export { useToDos };                                                                    // Ya no vamos a retornar el context ahora será un Custom Hook nada mas

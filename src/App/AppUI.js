@@ -1,4 +1,5 @@
 import React from 'react';
+import { useToDos } from '../ToDoContext/useToDos';
 import { ToDoCounter } from '../ToDoCounter';
 import { ToDoSearch } from '../ToDoSearch';
 import { ToDoList } from '../ToDoList';
@@ -11,6 +12,7 @@ import { Modal } from '../Modal';
 import { Footer } from '../Footer';
 import { ToDoForm } from '../ToDoForm';
 import { ToDoContext } from '../ToDoContext';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 function AppUI() {
   const {
@@ -22,7 +24,8 @@ function AppUI() {
     openModal,
     setOpenModal,
     validatingToDo,
-    totalToDos
+    totalToDos,
+    sincronizedToDos
   } = React.useContext(ToDoContext);                                            // Importamos los States y props que vamos a usar en la lógica de la UI
 
   return (                                                                      // Esto es lo que retorna nuestro Componente, son sus elementos internos, NO ES UN COMPONENTE, lo de abajo NO ES HTML, es JSX una sintaxis que facilita la lectura de código y luego se reenderiza a HTML clásico
@@ -63,6 +66,10 @@ function AppUI() {
           <ToDoForm validatingToDo={ validatingToDo } />
         </Modal>
       )}
+
+      <ChangeAlertWithStorageListener 
+        sincronize={sincronizedToDos}
+      />
       <Footer />
     </>
   );

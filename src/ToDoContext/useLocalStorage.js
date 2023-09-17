@@ -1,6 +1,7 @@
 import React from 'react';
 
 function useLocalStorage(itemName, initialValue){                                 // Definimos un 'Custom Hook' para acceder a los datos guardados en LocalStorage
+  const [sincronizedItem, setSincronizedItem] = React.useState(true);
   const [item, setItem] = React.useState(initialValue);
   const [loading, setLoading] = React.useState(true);                             // Creamos un State "artificial" de 'loading' con valor inicial a 'true' para que muestre un 'Loading Skeleton' mientras obtenemos los valores de los ToDos del LocalStorage
   const [error, setError] = React.useState(false);
@@ -18,12 +19,13 @@ function useLocalStorage(itemName, initialValue){                               
           setItem(parsedItem);                                                    // Y cambiamos el State de 'Item' con 'setItem' lo que provoca que se vuelva a renderizar el componente
         }
         setLoading(false);                                                        // Cambiamos el valor del State 'loading' a False
+        setSincronizedItem(true);
       } catch(error) {
         setLoading(false);
         setError(true);                                                           // Si hay un error actualizamos el State y se lo mostramos al usuario
       }
     }, 500)
-  }, []);
+  }, [sincronizedItem]);
 
   
   const saveItem = (newItem) => {                                                 // Función para guardar un nuevo ToDo en el LocalStorage y actualizar el State
@@ -31,11 +33,17 @@ function useLocalStorage(itemName, initialValue){                               
     setItem(newItem)                                                              // Actualizamos el State con el valor de 'newItem'
   };
 
+  const sincronizeItem = () => {
+    setLoading(true);
+    setSincronizedItem(false);
+  };
+
   return {
     item, 
     saveItem,
     loading,
-    error 
+    error,
+    sincronizeItem 
   };
 }
 
