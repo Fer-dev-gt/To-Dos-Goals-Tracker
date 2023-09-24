@@ -36,7 +36,7 @@ Keep track of your complete and pending task with a simple and good looking list
 <br>
 <img width="655" alt="Screenshot 2023-08-02 at 19 13 30" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/8cc2a8f6-ec02-4896-b00e-8b57cf3c515f">
 <br>
-You can quickly check how many To Do's you have completed and see how many are left.
+<p>You can quickly check how many To Do's you have completed and see how many are left.</p>
 
 <img width="693" alt="Screenshot 2023-08-02 at 19 15 08" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/1daaa245-ae07-4c19-82c9-97e205e52a0b">
 <br>
