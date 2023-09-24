@@ -33,7 +33,7 @@ When you create, delete or update any To Do and you have the app open on another
 <img width="412" alt="Screenshot 2023-08-01 at 23 29 34" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/51a9a881-faa2-4d87-b668-0a65483bd106">
 <br>
 You can use it from your phone thanks to our adaptive device design.
-
+<br>
 <img width="655" alt="Screenshot 2023-08-02 at 19 13 30" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/8cc2a8f6-ec02-4896-b00e-8b57cf3c515f">
 <br>
 You can quickly check how many To Do's you have completed and see how many are left.
