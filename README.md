@@ -28,7 +28,7 @@ Keep track of your complete and pending task with a simple and good looking list
 
 <img width="1724" alt="Screenshot 2023-09-16 at 23 46 22" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/4f6b9fee-fba1-4f35-8524-525cfe855e30">
 <br>
-When you create, delete or update any To Do and you have the app open on another tab it will display a message telling you that changes have been made, cool isn't?
+<p>When you create, delete or update any To Do and you have the app open on another tab it will display a message telling you that changes have been made, cool isn't?</p>
 
 <br>
 <img width="412" alt="Screenshot 2023-08-01 at 23 29 34" src="https://github.com/Fer-dev-gt/To-Dos-Goals-Tracker/assets/119085740/51a9a881-faa2-4d87-b668-0a65483bd106">
