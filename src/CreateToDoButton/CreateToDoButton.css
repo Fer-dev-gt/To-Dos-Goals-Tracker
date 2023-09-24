@@ -1,26 +1,26 @@
 .CreateToDoButton {
   background-color:#AEE2FF;
   box-shadow: 4px 8px 0px #000000;
-  border:2px solid #000000;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:68px;
-  position:fixed;
-  bottom:40px;
-  right:40px;
-  font-weight:900;
-  color:#000000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:80px;
-  width:80px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 68px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-weight: 900;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
   z-index: 4;
-  transform:rotate(0);
-  transition:.4s ease-in-out
+  transform: rotate(0);
+  transition: .4s ease-in-out
 }
 .CreateToDoButton:hover {
-  transform:rotate(225deg);
+  transform: rotate(225deg);
   box-shadow: 0px 0px 0px 4px #000000;
 }
 img {
